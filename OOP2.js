@@ -47,44 +47,45 @@
 // daughter.showInfo();
 
 // Four
-// function Character (name, health, power) {
-//
-// }
-//
-// Character.prototype.attack = function(enemy) {
-//   enemy.health -= this.power;
-// };
-//
-// function Hero() {
-//   this.name = 'Hero';
-//   this.health = 10;
-//   this.power = 5;
-// }
-//   Hero.prototype = Object.create(Character.prototype);
-//
-//   Hero.prototype.attack = function(enemy) {
-//     randNum = Math.floor(Math.random() * 10) + 0;
-//     if (randNum > 2) {
-//       enemy.health -= this.power;
-//     }
-//     else if (randNum <= 2){
-//       power = this.power * 2;
-//       enemy.health -= power;
-//     }
-//   };
-//
-//   function Enemy() {
-//     this.name = 'Enemy';
-//     this.health = 6;
-//     this.power = 2;
-//   }
-//
-//   Enemy.prototype = Object.create(Character.prototype);
-//
-// var hero = new Hero();
-// var enemy = new Enemy();
-// hero.attack(enemy);
-// console.log(enemy.health);
+function Character (name, health, power) {
+
+}
+
+Character.prototype.attack = function(enemy) {
+  enemy.health -= this.power;
+};
+
+function Hero() {
+  this.name = 'Hero';
+  this.health = 10;
+  this.power = 5;
+}
+  Hero.prototype = Object.create(Character.prototype);
+
+  Hero.prototype.attack = function(enemy) {
+    randNum = Math.floor(Math.random() * 10) + 1;
+    console.log(randNum);
+    if (randNum > 2) {
+      enemy.health -= this.power;
+    }
+    else if (randNum <= 2){
+      power = this.power * 2;
+      enemy.health -= power;
+    }
+  };
+
+  function Enemy() {
+    this.name = 'Enemy';
+    this.health = 6;
+    this.power = 2;
+  }
+
+  Enemy.prototype = Object.create(Character.prototype);
+
+var hero = new Hero();
+var enemy = new Enemy();
+hero.attack(enemy);
+console.log(enemy.health);
 //
 // // Six
 // function Person(name) {
