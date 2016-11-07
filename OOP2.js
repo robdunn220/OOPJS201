@@ -16,18 +16,14 @@
 //   timesLiked: 0
 // };
 // like.apply(pic1);
-// like.apply(pic1);
 // like.apply(pic2);
 //
 // console.log(pic1.timesLiked);
 // console.log(pic2.timesLiked);
 //
 // hate.apply(pic1);
-// hate.apply(pic1);
-// hate.apply(pic1);
 //
 // console.log(pic1.timesLiked);
-
 
 // var mom = {
 //   firstName: 'Alice',
@@ -36,7 +32,8 @@
 //   hairColor: 'black',
 //   showInfo: function () {
 //     for (var prop in this) {
-//       console.log(prop + ': ' + this[prop]);
+//       if (typeof this[prop] === "function") {}
+//       else {console.log(prop + ': ' + this[prop]);}
 //     }
 //   }
 // };
@@ -46,13 +43,12 @@
 // };
 //
 // daughter.__proto__ = mom;
-// console.log(daughter.lastName);
-//
 // mom.showInfo();
 // daughter.showInfo();
 
 // Four
-// function Character () {
+// function Character (name, health, power) {
+//
 // }
 //
 // Character.prototype.attack = function(enemy) {
@@ -64,7 +60,6 @@
 //   this.health = 10;
 //   this.power = 5;
 // }
-//
 //   Hero.prototype = Object.create(Character.prototype);
 //
 //   Hero.prototype.attack = function(enemy) {
@@ -90,15 +85,15 @@
 // var enemy = new Enemy();
 // hero.attack(enemy);
 // console.log(enemy.health);
-
-// Six
-function Person(name) {
-  this.name = name;
-  greet = function(other) {
-    console.log('Hello ' + other.name + '! My name is ' + this.name + '.');
-  };
-}
-
-var pOne = new Person('Rob');
-var pTwo = new Person('Riss');
-greet.apply(pOne, [pTwo]);
+//
+// // Six
+// function Person(name) {
+//   this.name = name;
+//   greet = function(other) {
+//     console.log('Hello ' + other.name + '! My name is ' + this.name + '.');
+//   };
+// }
+//
+// var pOne = new Person('Rob');
+// var pTwo = new Person('Riss');
+// greet.apply(pOne, [pTwo]);
